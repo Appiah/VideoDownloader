@@ -3,9 +3,8 @@ import java.io.PrintWriter;
 public class Main {
 
     public static void main(String[] args) {
-        public static void main(String[] args) {
             String download_path="C:\\videos_downloaded_via_java";
-            String url="https://www.youtube.com/watch?v=s34CqtrUS0A";
+            String url="https://www.website.com/what_branch/furth_path";//https://www.youtube.com/watch?v=MMMMMMnn
             String[] command =
                     {
                             "cmd",
@@ -23,6 +22,6 @@ public class Main {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
+
     }
 }
