@@ -4,13 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
             String download_path="C:\\videos_downloaded_via_java";
-            String url="https://www.website.com/what_branch/furth_path";//https://www.youtube.com/watch?v=MMMMMMnn
-            String[] command =
-                    {
-                            "cmd",
-                    };
+            String url="https://www.youtube.com/what_branch/furth_path";//https://www.youtube.com/watch?v=MMMMMMnn
+
+            String[] command = { "cmd",};
+
             Process p;
-            try {
+
+            try{
                 p = Runtime.getRuntime().exec(command);
                 new Thread(new DLSync(p.getErrorStream(), System.err)).start();
                 new Thread(new DLSync(p.getInputStream(), System.out)).start();
@@ -19,7 +19,7 @@ public class Main {
                 stdin.println(download_path+"\\youtube-dl "+url);
                 stdin.close();
                 p.waitFor();
-            } catch (Exception e) {
+            }catch(Exception e){
                 e.printStackTrace();
             }
 
